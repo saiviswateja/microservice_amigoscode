@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="eureka_server" />
         <module name="fraud" />
         <module name="customer" />
       </profile>
@@ -13,6 +14,7 @@
     <bytecodeTargetLevel>
       <module name="amigoservices" target="14" />
       <module name="customer" target="14" />
+      <module name="eureka_server" target="14" />
       <module name="fraud" target="14" />
     </bytecodeTargetLevel>
   </component>
