@@ -1,6 +1,7 @@
 package com.viswa.customer;
 
 import com.viswa.clients.fraud.FraudClient;
+import com.viswa.clients.notification.NotificationClient;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,7 @@ public class CustomerService {
     private final CustomerRepository customerRepository;
     private final RestTemplate restTemplate;
     private final FraudClient fraudClient;
+    private final NotificationClient notificationClient;
 
     public void registerCustomer(CustomerRegistrationRequest customerRegistrationRequest) {
         Customer customer = Customer.builder()
@@ -36,6 +38,10 @@ public class CustomerService {
             throw new IllegalStateException("fraudster");
         }
         //TODO: send notification
-        restTemplate.getForEntity("http://NOTIFICATION/api/v1/notifications/1", Void.class);
+        //using open feign for sending email
+//        restTemplate.getForEntity("http://NOTIFICATION/api/v1/notifications/1", Void.class);
+
+        //using feign for sending email
+        notificationClient.sendNotification(customer.getId());
     }
 }
