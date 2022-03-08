@@ -2,6 +2,7 @@ package com.viswa.customer;
 
 import com.viswa.clients.fraud.FraudClient;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -35,5 +36,6 @@ public class CustomerService {
             throw new IllegalStateException("fraudster");
         }
         //TODO: send notification
+        restTemplate.getForEntity("http://NOTIFICATION/api/v1/notifications/1", Void.class);
     }
 }

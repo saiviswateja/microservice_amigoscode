@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eureka_server" />
         <module name="client" />
+        <module name="notification" />
         <module name="fraud" />
         <module name="customer" />
       </profile>
@@ -19,6 +20,7 @@
       <module name="customer" target="14" />
       <module name="eureka_server" target="14" />
       <module name="fraud" target="14" />
+      <module name="notification" target="14" />
     </bytecodeTargetLevel>
   </component>
 </project>
