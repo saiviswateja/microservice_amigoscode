@@ -2,8 +2,8 @@ package com.viswa.customer;
 
 import com.viswa.clients.fraud.FraudClient;
 import com.viswa.clients.notification.NotificationClient;
+import com.viswa.clients.notification.NotificationRequest;
 import lombok.AllArgsConstructor;
-import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -42,6 +42,11 @@ public class CustomerService {
 //        restTemplate.getForEntity("http://NOTIFICATION/api/v1/notifications/1", Void.class);
 
         //using feign for sending email
-        notificationClient.sendNotification(customer.getId());
+        notificationClient.sendNotification(new NotificationRequest(
+                customer.getId(),
+                customer.getEmail(),
+                String.format("Hi %s, welcome to Amigoscode...",
+                        customer.getFirstName())
+        ));
     }
 }

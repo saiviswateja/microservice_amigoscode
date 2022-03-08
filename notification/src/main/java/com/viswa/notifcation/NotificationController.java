@@ -1,11 +1,9 @@
 package com.viswa.notifcation;
 
+import com.viswa.clients.notification.NotificationRequest;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
@@ -14,9 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class NotificationController {
     private final NotificationService notificationService;
 
-    @GetMapping(path = "{customerId}")
-    public void isFraudster(@PathVariable("customerId") Integer customerId) {
-        notificationService.sendNotification(customerId);
-        log.info("fraud check reuest for  customer {}", customerId);
+    @PostMapping
+    public void sendNotification(@RequestBody NotificationRequest notificationRequest) {
+        notificationService.sendNotification(notificationRequest.getToCustomerId());
+        log.info("fraud check reuest for  customer {}", notificationRequest.getToCustomerId());
     }
 }
