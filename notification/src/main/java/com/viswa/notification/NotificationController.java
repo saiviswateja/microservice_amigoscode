@@ -1,4 +1,4 @@
-package com.viswa.notifcation;
+package com.viswa.notification;
 
 import com.viswa.clients.notification.NotificationRequest;
 import lombok.AllArgsConstructor;
@@ -14,7 +14,7 @@ public class NotificationController {
 
     @PostMapping
     public void sendNotification(@RequestBody NotificationRequest notificationRequest) {
-        notificationService.sendNotification(notificationRequest.getToCustomerId());
+        notificationService.sendNotification(notificationRequest);
         log.info("fraud check reuest for  customer {}", notificationRequest.getToCustomerId());
     }
 }

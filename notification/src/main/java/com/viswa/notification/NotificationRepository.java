@@ -1,4 +1,4 @@
-package com.viswa.notifcation;
+package com.viswa.notification;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

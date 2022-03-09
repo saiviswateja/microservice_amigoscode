@@ -7,16 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="eureka_server" />
-        <module name="client" />
         <module name="notification" />
         <module name="apigw" />
         <module name="fraud" />
+        <module name="amqp" />
+        <module name="eureka_server" />
+        <module name="client" />
         <module name="customer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="amigoservices" target="14" />
+      <module name="amqp" target="14" />
       <module name="apigw" target="14" />
       <module name="client" target="14" />
       <module name="customer" target="14" />

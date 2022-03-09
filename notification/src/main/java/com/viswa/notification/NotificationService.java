@@ -1,5 +1,6 @@
-package com.viswa.notifcation;
+package com.viswa.notification;
 
+import com.viswa.clients.notification.NotificationRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +11,10 @@ public class NotificationService {
     @Autowired
     public NotificationRepository notificationRepository;
 
-    public void sendNotification(Integer customerId) {
-        System.out.println("Notification is sent to the customer id " + customerId);
+    public void sendNotification(NotificationRequest notificationRequest) {
+        System.out.println("Notification is sent to the customer id " + notificationRequest.getToCustomerName());
         notificationRepository.save(NotificationHistory.builder()
-                .customerId(customerId)
+                .customerId(notificationRequest.getToCustomerId())
                 .createdAt(LocalDateTime.now())
                 .build());
     }

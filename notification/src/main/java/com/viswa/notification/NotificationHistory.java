@@ -1,4 +1,4 @@
-package com.viswa.notifcation;
+package com.viswa.notification;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
