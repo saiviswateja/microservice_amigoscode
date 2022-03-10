@@ -16,7 +16,7 @@
         <module name="customer" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="14">
       <module name="amigoservices" target="14" />
       <module name="amqp" target="14" />
       <module name="apigw" target="14" />
