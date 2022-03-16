@@ -8,7 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/client/client.iml" filepath="$PROJECT_DIR$/client/client.iml" />
       <module fileurl="file://$PROJECT_DIR$/clients/clients.iml" filepath="$PROJECT_DIR$/clients/clients.iml" />
       <module fileurl="file://$PROJECT_DIR$/customer/customer.iml" filepath="$PROJECT_DIR$/customer/customer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/eureka_server/eureka_server.iml" filepath="$PROJECT_DIR$/eureka_server/eureka_server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka_server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka_server.iml" />
       <module fileurl="file://$PROJECT_DIR$/fraud/fraud.iml" filepath="$PROJECT_DIR$/fraud/fraud.iml" />
       <module fileurl="file://$PROJECT_DIR$/notification/notification.iml" filepath="$PROJECT_DIR$/notification/notification.iml" />
     </modules>
